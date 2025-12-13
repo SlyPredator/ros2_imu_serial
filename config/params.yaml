@@ -1,0 +1,14 @@
+imu_serial_node:
+  ros__parameters:
+    # Serial port configuration
+    serial_port: "/dev/ttyUSB0"
+    baudrate: 115200  # MUST be integer (no quotes)
+    
+    # ROS configuration
+    frame_id: "imu_link"
+    publish_rate: 50.0  # Float
+    
+    # Filter configuration
+    use_madgwick: true  # Boolean (true/false, no quotes)
+    madgwick_beta: 0.1   # Float
+    publish_euler: true  # Boolean (true/false, no quotes)
